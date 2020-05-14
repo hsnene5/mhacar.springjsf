@@ -4,11 +4,18 @@
 	  xmlns:f="http://java.sun.com/jsf/core"
 	  xmlns:h="http://java.sun.com/jsf/html">
 
-<h:head></h:head>
+<h:head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+	<h:outputScript  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/>
+	<h:outputScript  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"/>
+	<h:outputScript src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"/>
+</h:head>
 <body>
 
-<div>
-    <h3>Muhammed Haktan Acar</h3>
+<div class="container p-3 my-3 bg-dark text-white">
+	<h3>Muhammed Haktan Acar</h3>
+	<button type="button" class="btn btn-dark">Dark</button>
 </div>
 <h:form>
 	<h:outputLabel value="#{helloBean.message}" />

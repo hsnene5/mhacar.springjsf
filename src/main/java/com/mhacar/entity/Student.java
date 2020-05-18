@@ -9,10 +9,13 @@ public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private Long id;
-    private String name;
+    @Column(name="first_name")
     private String firstName;
+    @Column(name="last_name")
     private String lastName;
+    @Column(name="email")
     private String email;
 
     public Student() {
@@ -22,12 +25,10 @@ public class Student {
     public Student(Long id, String name, String passportNumber) {
         super();
         this.id = id;
-        this.name = name;
     }
 
     public Student(String name, String passportNumber) {
         super();
-        this.name = name;
     }
 
 
@@ -35,18 +36,11 @@ public class Student {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
 
     @Override
     public String toString() {
-        return String.format("Student [id=%s, name=%s, passportNumber=%s]", id, name);
+        return String.format("Student [id=%s, name=%s, passportNumber=%s]", id);
     }
 
     @Basic

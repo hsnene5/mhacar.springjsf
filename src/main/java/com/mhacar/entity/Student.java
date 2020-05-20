@@ -1,53 +1,52 @@
 package com.mhacar.entity;
 
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
 import javax.persistence.*;
-import java.util.Objects;
+import java.io.Serializable;
 
 @Entity
+@EntityListeners(AuditingEntityListener.class)
 @Table(name ="student")
-public class Student {
+public class Student implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="id")
-    private Long id;
+    private int id;
+
     @Column(name="first_name")
     private String firstName;
+
     @Column(name="last_name")
     private String lastName;
+
     @Column(name="email")
     private String email;
 
+
+    // define constructors
+
     public Student() {
-        super();
+
     }
 
-    public Student(Long id, String name, String passportNumber) {
-        super();
+    public Student(String firstName, String lastName, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
+
+    // define getter/setter
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
         this.id = id;
     }
 
-    public Student(String name, String passportNumber) {
-        super();
-    }
-
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                '}';
-    }
-
-    @Basic
-    @Column(name = "first_name", nullable = true, length = 45)
     public String getFirstName() {
         return firstName;
     }
@@ -56,8 +55,6 @@ public class Student {
         this.firstName = firstName;
     }
 
-    @Basic
-    @Column(name = "last_name", nullable = true, length = 45)
     public String getLastName() {
         return lastName;
     }
@@ -66,8 +63,6 @@ public class Student {
         this.lastName = lastName;
     }
 
-    @Basic
-    @Column(name = "email", nullable = true, length = 45)
     public String getEmail() {
         return email;
     }
@@ -76,19 +71,12 @@ public class Student {
         this.email = email;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Student student = (Student) o;
-        return Objects.equals(id, student.id) &&
-                Objects.equals(firstName, student.firstName) &&
-                Objects.equals(lastName, student.lastName) &&
-                Objects.equals(email, student.email);
-    }
+    // define tostring
 
     @Override
-    public int hashCode() {
-        return Objects.hash(id, firstName, lastName, email);
+    public String toString() {
+        return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
     }
+
+
 }

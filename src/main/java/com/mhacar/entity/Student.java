@@ -36,11 +36,14 @@ public class Student {
         this.id = id;
     }
 
-
-
     @Override
     public String toString() {
-        return String.format("Student [id=%s, name=%s, passportNumber=%s]", id);
+        return "Student{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 
     @Basic

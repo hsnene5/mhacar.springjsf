@@ -43,6 +43,14 @@ public class Application {
 	public ServletContextInitializer servletContextInitializer() {
 		return servletContext -> {
 			servletContext.setInitParameter("com.sun.faces.forceLoadConfiguration", Boolean.TRUE.toString());
+			//Primefacesin ücretsiz temalarından bootstrap örneği yaptık değiştirebilirsiniz
+			servletContext.setInitParameter("primefaces.THEME", "bootstrap");
+			//Primefaces client browser tarafında kontrol edilebilme örneğin textbox 10 karakter olmalı vs..
+			servletContext.setInitParameter("primefaces.CLIENT_SIDE_VALIDATION", Boolean.TRUE.toString());
+			//Xhtml sayfalarında commentlerin parse edilmemesi.
+			servletContext.setInitParameter("javax.faces.FACELETS_SKIP_COMMENTS", Boolean.TRUE.toString());
+			//primefaces icon set için
+			servletContext.setInitParameter("primefaces.FONT_AWESOME", Boolean.TRUE.toString());
 		};
 	}
 
@@ -50,5 +58,5 @@ public class Application {
 	public ServletListenerRegistrationBean<ConfigureListener> jsfConfigureListener() {
 		return new ServletListenerRegistrationBean<ConfigureListener>(new ConfigureListener());
 	}
-	//JSF Configration
+	//JSF Confi	gration
 }

@@ -1,10 +1,11 @@
-package com.mhacar.dao;
+package com.mhacar.service;
 
 import com.mhacar.entity.Student;
 
 import java.util.List;
 
-public interface StudentDAO {
+public interface StudentService {
 
     public List<Student> findAll();
+
 }

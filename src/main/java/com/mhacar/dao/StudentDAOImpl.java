@@ -11,12 +11,12 @@ import javax.persistence.EntityManager;
 import java.util.List;
 
 @Repository
-public class StudenDAOImpl implements StudentDAO {
+public class StudentDAOImpl implements StudentDAO {
 
     private EntityManager entityManager;
 
     @Autowired
-    public StudenDAOImpl(EntityManager theEntityManager) {
+    public StudentDAOImpl(EntityManager theEntityManager) {
         entityManager = theEntityManager;
     }
 

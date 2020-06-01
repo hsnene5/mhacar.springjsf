@@ -24,11 +24,7 @@ public class Student implements Serializable {
     @Column(name="email")
     private String email;
 
-
-    // define constructors
-
-    public Student() {
-
+    public Student () {
     }
 
     public Student(String firstName, String lastName, String email) {
@@ -36,8 +32,6 @@ public class Student implements Serializable {
         this.lastName = lastName;
         this.email = email;
     }
-
-    // define getter/setter
 
     public int getId() {
         return id;
@@ -70,8 +64,6 @@ public class Student implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    // define tostring
 
     @Override
     public String toString() {

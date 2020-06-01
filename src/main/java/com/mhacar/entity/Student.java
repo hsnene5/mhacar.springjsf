@@ -24,6 +24,11 @@ public class Student implements Serializable {
     @Column(name="email")
     private String email;
 
+    @ManyToOne(cascade= {CascadeType.PERSIST, CascadeType.MERGE,
+            CascadeType.DETACH, CascadeType.REFRESH})
+    @JoinColumn(name="depertmant_id")
+    private Depertmant depertmant;
+
     public Student () {
     }
 
@@ -63,6 +68,14 @@ public class Student implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Depertmant getDepertmant() {
+        return depertmant;
+    }
+
+    public void setDepertmant(Depertmant depertmant) {
+        this.depertmant = depertmant;
     }
 
     @Override

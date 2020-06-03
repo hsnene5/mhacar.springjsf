@@ -15,12 +15,14 @@ public class Depertmant implements Serializable {
     @Column(name="id")
     private int id;
 
-
     @Column(name="title")
     private String title;
 
     @Column(name="description")
     private String description;
+
+    public Depertmant() {
+    }
 
     public Depertmant(int id, String title, String description) {
         this.id = id;

@@ -7,23 +7,119 @@
       xmlns:h="http://java.sun.com/jsf/html">
 
 <h:head>
+    <link rel="icon" type="image/x-icon" href="WEB-INF/view/assets/img/favicon.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <h:link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <link href="css/navbar.css" rel="stylesheet"/>
     <h:outputScript src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/>
     <h:outputScript src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"/>
     <h:outputScript src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"/>
 </h:head>
+
 <body>
 
-<div class="container p-3 my-3 bg-dark text-white">
-    <h3>Muhammed Haktan Acar</h3>
+
+<div class="nav">
+    <h:inputText type="checkbox" id="nav-check"/>
+    <div class="nav-header">
+        <div class="nav-title">
+            - University
+        </div>
+    </div>
+    <div class="nav-btn">
+        <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+
+    <div class="nav-links">
+        <a target="_blank">Engineering</a>
+        <a target="_blank">Medical</a>
+        <a target="_blank">Architectyre</a>
+    </div>
 </div>
 
-<div>
 
-    <p:button value="Student List" style="margin-right:20px;">
-    </p:button>
+    <div class="header-img">
+        <h1 class="header-h"> - University</h1>
+    </div>
 
+<div class="page-section portfolio" id="portfolio">
+    <div class="container">
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Faculties</h2>
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4 mb-5">
+                <div class="portfolio-item mx-auto">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+                         onclick="PF('dlg2').show();">
+                        <div class="portfolio-item-caption-content text-center text-white"><i
+                                class="fas fa-plus fa-3x"></i></div>
+                    </div>
+                    <h:graphicImage class="img-fluid" value="/assets/img/portfolio/hat.svg" alt="" href="#amodal"
+                                    data-toggle="modal"/>
+                    <h2>Faculty of Engineering</h2>
+                </div>
+            </div>
+            <!-- Portfolio Item 2-->
+            <div class="col-md-6 col-lg-4 mb-5">
+                <div class="portfolio-item mx-auto">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white"><i
+                                class="fas fa-plus fa-3x"></i></div>
+                    </div>
+                    <h:graphicImage class="img-fluid" value="/assets/img/portfolio/doctor.svg" alt=""/>
+                    <h2>Faculty of Medical</h2>
+                </div>
+            </div>
+            <!-- Portfolio Item 3-->
+            <div class="col-md-6 col-lg-4 mb-5">
+                <div class="portfolio-item mx-auto">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white"><i
+                                class="fas fa-plus fa-3x"></i></div>
+                    </div>
+                    <h:graphicImage class="img-fluid" value="/assets/img/portfolio/urban.svg"/>
+                    <h2>Faculty of Architecture</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer-->
+<div class="footer text-center">
+    <div class="container">
+        <div class="row">
+            <!-- Footer Location-->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <h4 class="text-uppercase mb-4">Location</h4>
+                <p class="lead mb-0"><br /></p>
+            </div>
+            <!-- Footer Social Icons-->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <h4 class="text-uppercase mb-4">Around the Web</h4>
+                <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+            </div>
+            <!-- Footer About Text-->
+            <div class="col-lg-4">
+                <h4 class="text-uppercase mb-4">About - University</h4>
+                <p class="lead mb-0"><a></a>.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Copyright Section-->
+<div class="copyright py-4 text-center text-white">
+    <div class="container"><small>Copyright © - University  2020</small></div>
 </div>
 
 </body>

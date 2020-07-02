@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <link rel="icon" type="image/x-icon" href="WEB-INF/view/assets/img/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <h:link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+
+    <h:outputScript src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"/>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <link href="css/navbar.css" rel="stylesheet"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/book.ico"/>
+    <h:outputScript src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/>
+    <h:outputScript src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"/>
+    <h:outputScript src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"/>
+</h:head>
+
+<h:body>
+
+
+<div class="nav">
+    <h:inputText type="checkbox" id="nav-check"/>
+    <div class="nav-header">
+        <div class="nav-title">
+            - University
+        </div>
+    </div>
+    <div class="nav-btn">
+        <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+
+    <div class="nav-links">
+        <a target="_blank">Engineering</a>
+        <a target="_blank">Medical</a>
+        <a target="_blank">Architecture</a>
+    </div>
+</div>
+
+
+<div class="header-img">
+    <h1 class="header-h"> - University</h1>
+</div>
+
+    <h:form id="form">
+
+
+        <p:panelGrid columns="1">
+
+
+            <p:inputText placeholder="Firstname" value="#{student.firstName}" />
+
+
+            <p:inputText placeholder="Lastname" value="#{student.lastName}" />
+
+
+        </p:panelGrid>
+
+        <p:commandButton value="btnAddPerson" update=":form" action="#{studentService.addStudent(student)}" />
+
+
+
+
+    </h:form>
+
+
+
+
+
+<!-- Footer-->
+<div class="footer text-center">
+    <div class="container">
+        <div class="row">
+            <!-- Footer Location-->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <h4 class="text-uppercase mb-4">Location</h4>
+                <p class="lead mb-0"><br/></p>
+            </div>
+            <!-- Footer Social Icons-->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <h4 class="text-uppercase mb-4">Around the Web</h4>
+                <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a><a
+                    class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a><a
+                    class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a><a
+                    class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+            </div>
+            <!-- Footer About Text-->
+            <div class="col-lg-4">
+                <h4 class="text-uppercase mb-4">About - University</h4>
+                <p class="lead mb-0"><a></a>.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Copyright Section-->
+<div class="copyright py-4 text-center text-white">
+    <div class="container"><small>Copyright © - University 2020</small></div>
+</div>
+
+</h:body>
+</html>

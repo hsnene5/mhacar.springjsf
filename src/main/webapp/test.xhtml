@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+</h:head>
+<body>
+
+
+<h:form id="form">
+
+    <p:panelGrid columns="1">
+
+
+        <p:inputText placeholder="Firstname" value="#{student.firstName}" />
+
+        <p:inputText placeholder="Lastname" value="#{student.lastName}" />
+
+        <p:inputText placeholder="Job" value="#{student.email}" />
+
+        <p:inputText placeholder="City" value="#{student.id}" />
+
+    </p:panelGrid>
+
+    <p:commandButton value="btnAddPerson" actionListener="#{studentController.addStudent(student)}" />
+
+
+
+
+</h:form>
+</body>
+</html>

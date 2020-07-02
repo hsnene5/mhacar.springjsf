@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+@Service("studentService")
 public class StudentServiceImpl implements StudentService{
 
     @Autowired
@@ -15,6 +15,12 @@ public class StudentServiceImpl implements StudentService{
 
     @Override
     public List<Student> findAll() {
+
         return studentDAO.findAll();
+    }
+
+    @Override
+    public void addStudent(Student student) {
+        studentDAO.addStudent(student);
     }
 }

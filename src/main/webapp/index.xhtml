@@ -10,8 +10,11 @@
     <link rel="icon" type="image/x-icon" href="WEB-INF/view/assets/img/favicon.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
     <h:link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+
+    <h:outputScript src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"/>
     <link href="css/styles.css" rel="stylesheet"/>
     <link href="css/navbar.css" rel="stylesheet"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/book.ico"/>
     <h:outputScript src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/>
     <h:outputScript src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"/>
     <h:outputScript src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"/>
@@ -38,7 +41,7 @@
     <div class="nav-links">
         <a target="_blank">Engineering</a>
         <a target="_blank">Medical</a>
-        <a target="_blank">Architectyre</a>
+        <a target="_blank">Architecture</a>
     </div>
 </div>
 
@@ -52,7 +55,9 @@
         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Faculties</h2>
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
-            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div>
+                <i class="pi pi-bookmark"></i>
+            </div>
             <div class="divider-custom-line"></div>
         </div>
         <div class="row">
@@ -60,8 +65,8 @@
                 <div class="portfolio-item mx-auto">
                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"
                          onclick="PF('dlg2').show();">
-                        <div class="portfolio-item-caption-content text-center text-white"><i
-                                class="fas fa-plus fa-3x"></i></div>
+                        <div class="portfolio-item-caption-content text-center text-white">
+                            <i class="fas fa-plus fa-3x"></i></div>
                     </div>
                     <h:graphicImage class="img-fluid" value="/assets/img/portfolio/hat.svg" alt="" href="#amodal"
                                     data-toggle="modal"/>
@@ -93,6 +98,10 @@
         </div>
     </div>
 </div>
+
+<p>
+    <a href="#{pageContext.request.contextPath}/list">Student List</a>
+</p>
 
 
 <!-- Footer-->

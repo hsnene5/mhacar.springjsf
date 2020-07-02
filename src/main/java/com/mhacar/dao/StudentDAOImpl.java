@@ -24,16 +24,21 @@ public class StudentDAOImpl implements StudentDAO {
     @Transactional
     public List<Student> findAll() {
 
-        // current Hibernate session
         Session currentSession = entityManager.unwrap(Session.class);
 
-        // query
         Query<Student> theQuery =
                 currentSession.createQuery("from Student", Student.class);
 
         List<Student> students =  theQuery.getResultList();
 
         return students;
+    }
+
+    @Override
+    public void addStudent(Student student) {
+        Session currentSession = entityManager.unwrap(Session.class);
+
+        currentSession.saveOrUpdate(student);
     }
 
 }

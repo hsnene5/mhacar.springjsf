@@ -8,4 +8,6 @@ public interface StudentService {
 
     public List<Student> findAll();
 
+    public void addStudent(Student student);
+
 }
